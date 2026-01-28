@@ -1,0 +1,17 @@
+  الابتدائي :  
+
+ user:  primary_admin          pass:  forqprimary@123
+
+الاعدادي : 
+
+ user : middle_admin          pass:     forqmiddle@123
+
+
+
+الثانوي :  adminsec              pass:     forqsec@123
+
+
+
+المدير العام للمدارس : 
+
+        user:   forqmanager          pass : forq@2026@manager
