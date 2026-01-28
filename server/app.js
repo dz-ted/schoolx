@@ -46,7 +46,8 @@ app.post("/api/login", async (req, res) => {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const valid = await bcrypt.compare(password.trim(), user.password);
+    const storedHash = user.password?.replace(/^\$2y\$/, "$2b$");
+    const valid = storedHash ? await bcrypt.compare(password.trim(), storedHash) : false;
     if (!valid) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
